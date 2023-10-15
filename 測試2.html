@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+      /* Set the background color of the body */
+      body {
+        background-color: #f2f2f2;
+      }
+      
+      /* Center the login form on the page */
+      #login-form {
+        margin: 50px auto;
+        width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #ccc;
+      }
+      
+      /* Style the input fields */
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        box-shadow: 0px 0px 5px #ccc;
+      }
+      
+      /* Style the submit button */
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+      }
+      
+      /* Style the error message */
+      #error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="login-form" onsubmit="return validateLogin()">
+      <label>帳號:</label>
+      <input type="text" id="username" required>
+      <label>密碼:</label>
+      <input type="password" id="password" required>
+      <input type="submit" value="Login">
+      <div id="error-message"></div>
+    </form>
+    
+    <script>
+      function validateLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        
+        // Replace the following code with your own server-side authentication logic
+        if (username === "user" && password === "password") {
+          window.location.href = "影片專區.html";
+          return false;
+    
+        } else {
+            if (username === "allen" && password === "allen990728") {
+          window.location.href = "影片專區.html";
+          return false;
+        } else {if (username === "noah" && password === "noah1227") {
+          window.location.href = "影片專區.html";
+          return false;
+        } else {if (username === "dclin" && password === "dclin1207") {
+          window.location.href = "影片專區.html";
+          return false;
+        } else {if (username === "yuki" && password === "yuki1113") {
+          window.location.href = "影片專區.html";
+          return false;
+        } else {if (username === "yoyo" && password === "yoyo0121") {
+          window.location.href = "影片專區.html";
+          return false;
+        } else {if (username === "mama" && password === "mama0129") {
+          window.location.href = "影片專區.html";
+          return false;
+        } else {const errorMessage = document.getElementById("error-message");
+          errorMessage.textContent = "帳號或密碼錯誤";
+          return false;
+          
+        }
+          
+        }
+          
+        }
+          
+        }
+          
+        }
+          
+        }
+        }
+      }
+    </script>
+  </body>
+</html>

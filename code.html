@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>測驗題目</title>
+</head>
+<body>
+	<h1>問題 1：</h1>
+	<p>請問台灣的首都是哪裡？</p>
+	<form>
+		<input type="radio" name="q1" value="a">a. 台北</input><br>
+		<input type="radio" name="q1" value="b">b. 高雄</input><br>
+		<input type="radio" name="q1" value="c">c. 台中</input><br>
+		<input type="radio" name="q1" value="d">d. 台南</input><br>
+		<button type="button" onclick="checkAnswer()">提交</button>
+	</form>
+
+	<p id="result"></p>
+
+	<script>
+		var correctScore = 0; // 正確積分
+		var incorrectScore = 0; // 錯誤積分
+
+		function checkAnswer() {
+			var q1 = document.querySelector('input[name="q1"]:checked').value; // 取得使用者選擇的答案
+
+			if (q1 === "a") {
+				correctScore++;
+				document.getElementById("result").innerHTML = "回答正確！";
+			} else {
+				incorrectScore++;
+				document.getElementById("result").innerHTML = "回答錯誤！";
+			}
+		}
+	</script>
+</body>
+</html>

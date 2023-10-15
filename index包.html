@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>計劃表</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		td {
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+		input {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 5px;
+			font-size: 16px;
+			border: none;
+			background-color: #f5f5f5;
+		}
+	</style>
+	<script>
+		// 將輸入框的內容保存到 localStorage 中
+		function saveInput() {
+			var inputs = document.getElementsByTagName('input');
+			for (var i = 0; i < inputs.length; i++) {
+				localStorage.setItem(inputs[i].id, inputs[i].value);
+			}
+		}
+
+		// 從 localStorage 中恢復輸入框的內容
+		function restoreInput() {
+			var inputs = document.getElementsByTagName('input');
+			for (var i = 0; i < inputs.length; i++) {
+				var value = localStorage.getItem(inputs[i].id);
+				if (value) {
+					inputs[i].value = value;
+				}
+			}
+			saveInput();
+		}
+
+		window.onload = function() {
+			restoreInput();
+		}
+	</script>
+</head>
+<body>
+	<h1 style="text-align: center;">計劃表</h1>
+	<table>
+		<tr>
+			<td><input type="text" id="input1" oninput="saveInput()"></td>
+			<td><input type="text" id="input2" oninput="saveInput()"></td>
+			<td><input type="text" id="input3" oninput="saveInput()"></td>
+			<td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="input6" oninput="saveInput()"></td>
+			<td><input type="text" id="input7" oninput="saveInput()"></td>
+			<td><input type="text" id="input8" oninput="saveInput()"></td>
+			<td><input type="text" id="input9" oninput="saveInput()"></td>
+			<td><input type="text" id="input10" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>

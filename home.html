@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的网站</title>
+    
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我的网站</h1>
+    </header>
+    <nav>
+        <a class="button" href="page1.html">页面 1</a>
+<a class="button" href="page2.html">页面 2</a>
+
+    </nav>
+    <main>
+        <p>这是首页内容。</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 我的网站</p>
+    </footer>
+    <style>/* style.css */
+   /* style.css */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+        </style>
+    <script>// script.js
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav a");
+        
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute("href");
+        
+                    // 淡出当前页面
+                    document.body.style.opacity = 0;
+        
+                    // 在短暂延迟后跳转到新页面
+                    setTimeout(function() {
+                        window.location.href = url;
+                    }, 500);
+                });
+            });
+        });
+        </script>
+</body>
+</html>
